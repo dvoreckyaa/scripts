@@ -1,0 +1,1 @@
+update ice.Report set CGCCODE='IN' where ReportId like 'APSelf%'

@@ -1,0 +1,58 @@
+﻿<Template>
+    <Outputfile>PTInvcTaxHelper.cs</Outputfile>
+	<Params>
+		<TableClassName>PTInvcTaxTable</TableClassName>
+		<SchemaName>CSFPT</SchemaName>
+		<TableName>PTInvcTax</TableName>
+		<RowClassName>PTInvcTaxRow</RowClassName>
+		<Namespace>Extensibility.CSF.Portugal</Namespace>
+		<ModelNamespace>Csfpt.Tables</ModelNamespace>
+		<BaseRow>InvcTaxRow</BaseRow>
+	</Params>
+	<ExternalFields>
+		<ExternalField>
+			<Name>Company</Name>
+			<Fieldname>PTInvcTax.ColumnNames.Company</Fieldname>
+			<Type>String</Type>
+		</ExternalField>
+		<ExternalField>
+			<Name>InvoiceNum</Name>
+			<Fieldname>PTInvcTax.ColumnNames.InvoiceNum</Fieldname>
+			<Type>String</Type>
+		</ExternalField>
+		<ExternalField>
+			<Name>InvoiceLine</Name>
+			<Fieldname>PTInvcTax.ColumnNames.InvoiceLine</Fieldname>
+			<Type>int</Type>
+		</ExternalField>
+		<ExternalField>
+			<Name>TaxCode</Name>
+			<Fieldname>PTInvcTax.ColumnNames.TaxCode</Fieldname>
+			<Type>string</Type>
+		</ExternalField>
+		<ExternalField>
+			<Name>RateCode</Name>
+			<Fieldname>PTInvcTax.ColumnNames.RateCode</Fieldname>
+			<Type>string</Type>
+		</ExternalField>
+		<ExternalField>
+			<Name>ECAcquisitionSeq</Name>
+			<Fieldname>PTInvcTax.ColumnNames.ECAcquisitionSeq</Fieldname>
+			<Type>int</Type>
+		</ExternalField>
+		<ExternalField>
+			<Name>ExemptionReasonCode</Name>
+			<Fieldname>PTInvcTax.ColumnNames.ExemptionReasonCode</Fieldname>
+			<Type>string</Type>
+		</ExternalField>
+	</ExternalFields>
+	<ExternalFieldFormat>
+		<![CDATA[
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        public $Type$ $Name$
+        {
+        	get {return ($Type$)Convert.ChangeType(this.ExtensionRow[$FieldName$], typeof($Type$));}
+        }
+        ]]>
+	</ExternalFieldFormat>
+</Template>

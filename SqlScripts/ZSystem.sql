@@ -1,0 +1,1 @@
+INSERT INTO Ice.ZSystem(SystemCode,DBSchemaName,SystemFlag) Values('CSFIN','Csfin',0)

@@ -1,0 +1,1 @@
+update ice.RptStructuredOutputDef set SystemFlag = 0 where RptStructuredOutputDefID = 'INGSTR1'
